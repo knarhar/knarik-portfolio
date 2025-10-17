@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/knarik-portfolio/static/css/main.491aae66.css",
+    "main.js": "/knarik-portfolio/static/js/main.fa7cf8f4.js",
+    "static/js/453.269361b1.chunk.js": "/knarik-portfolio/static/js/453.269361b1.chunk.js",
+    "index.html": "/knarik-portfolio/index.html",
+    "main.491aae66.css.map": "/knarik-portfolio/static/css/main.491aae66.css.map",
+    "main.fa7cf8f4.js.map": "/knarik-portfolio/static/js/main.fa7cf8f4.js.map",
+    "453.269361b1.chunk.js.map": "/knarik-portfolio/static/js/453.269361b1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.491aae66.css",
+    "static/js/main.fa7cf8f4.js"
+  ]
+}
