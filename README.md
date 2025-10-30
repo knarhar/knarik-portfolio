@@ -30,3 +30,8 @@ A modern, responsive portfolio website built with React and Tailwind CSS, featur
 - **Tailwind CSS** - Utility-first CSS framework
 - **Lucide React** - Beautiful icon library
 - **GitHub Pages** - Free hosting for static sites
+
+
+# Portfolio URL
+
+[Url to portfolio](https://knarhar.github.io/knarik-portfolio/)
