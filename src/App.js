@@ -373,11 +373,6 @@ const Portfolio = () => {
                   <span>harutyunyanqnarik2@gmail.com</span>
                 </a>
 
-                <a href="tel:+37494041229" className="flex items-center space-x-3 text-gray-300 hover:text-violet-400 transition-colors">
-                  <Phone size={20} />
-                  <span>+374 94 041-229</span>
-                </a>
-
                 <div className="flex items-center space-x-3 text-gray-300">
                   <MapPin size={20} />
                   <span>Yerevan, Armenia</span>
