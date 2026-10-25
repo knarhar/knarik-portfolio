@@ -11,7 +11,7 @@ All site files live in `site/`:
 
 - `site/index.html` - page content
 - `site/styles.css` - all styles (fonts: Unbounded for headings, Onest for text)
-- `site/script.js` - scroll reveal and active nav link
+- `site/script.js` - scroll reveal, active nav link and stacking project cards
 - `site/assets/Knarik_Harutyunyan_CV.pdf` - downloadable CV
 
 No build step. GitHub Pages serves the `gh-pages` branch, which holds the
