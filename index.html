@@ -79,107 +79,109 @@
           <div class="stat"><span class="stat-value">C# · Python · TS</span><span class="stat-label">what I ship in most</span></div>
         </div>
 
-        <article class="project reveal">
-          <div class="project-head">
-            <span class="num">01</span><span class="label">AI · RAG</span><span class="year">2026</span>
-          </div>
-          <h3 class="project-title">Arcane Library</h3>
-          <p>
-            Upload your technical documents, ask questions about them and get answers with
-            evidence. Every claim cites the passage it came from, and when the documents don't
-            cover a question, the app says so instead of inventing an answer.
-          </p>
-          <ul class="points">
-            <li>Full RAG pipeline: text extraction from PDF, Markdown and TXT, chunking, embeddings and vector search in pgvector</li>
-            <li>Grounded answers from Claude with numbered citations; below a relevance floor the model is never called</li>
-            <li>Multilingual E5 embeddings running locally, so Armenian and Russian documents work too</li>
-            <li>Auth with password reset, bookmarks for saved answers, tests for chunking, extraction, search and chat</li>
-          </ul>
-          <div class="tags">
-            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>pgvector</span><span>sentence-transformers</span><span>Claude</span><span>React 19</span><span>TypeScript</span>
-          </div>
-          <p class="note">Private repository · code walkthrough on request</p>
-        </article>
+        <div class="project-stack">
+          <article class="project">
+            <div class="project-head">
+              <span class="num">01</span><span class="label">AI · RAG</span><span class="year">2026</span>
+            </div>
+            <h3 class="project-title">Arcane Library</h3>
+            <p>
+              Upload your technical documents, ask questions about them and get answers with
+              evidence. Every claim cites the passage it came from, and when the documents don't
+              cover a question, the app says so instead of inventing an answer.
+            </p>
+            <ul class="points">
+              <li>Full RAG pipeline: text extraction from PDF, Markdown and TXT, chunking, embeddings and vector search in pgvector</li>
+              <li>Grounded answers from Claude with numbered citations; below a relevance floor the model is never called</li>
+              <li>Multilingual E5 embeddings running locally, so Armenian and Russian documents work too</li>
+              <li>Auth with password reset, bookmarks for saved answers, tests for chunking, extraction, search and chat</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>pgvector</span><span>sentence-transformers</span><span>Claude</span><span>React 19</span><span>TypeScript</span>
+            </div>
+            <p class="note">Private repository · code walkthrough on request</p>
+          </article>
 
-        <article class="project reveal">
-          <div class="project-head">
-            <span class="num">02</span><span class="label">Telegram bot · .NET</span><span class="year">2026</span>
-          </div>
-          <h3 class="project-title">FinanceBot</h3>
-          <p>
-            A Telegram bot that tracks spending. Send it “4.50 coffee with milk” and it saves
-            the entry; ask for /today or /month and it replies with a recap.
-          </p>
-          <ul class="points">
-            <li>Automatic daily digest with a link to a full web report page</li>
-            <li>Month view: last 7 vs previous 7 days, typical day and top 3 categories</li>
-            <li>Polling or webhook mode, command handlers wired as keyed services</li>
-          </ul>
-          <div class="tags">
-            <span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>PostgreSQL</span><span>Telegram.Bot</span>
-          </div>
-          <div class="links">
-            <a class="link" href="https://github.com/knarhar/FinanceBot" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          </div>
-        </article>
+          <article class="project">
+            <div class="project-head">
+              <span class="num">02</span><span class="label">Telegram bot · .NET</span><span class="year">2026</span>
+            </div>
+            <h3 class="project-title">FinanceBot</h3>
+            <p>
+              A Telegram bot that tracks spending. Send it “4.50 coffee with milk” and it saves
+              the entry; ask for /today or /month and it replies with a recap.
+            </p>
+            <ul class="points">
+              <li>Automatic daily digest with a link to a full web report page</li>
+              <li>Month view: last 7 vs previous 7 days, typical day and top 3 categories</li>
+              <li>Polling or webhook mode, command handlers wired as keyed services</li>
+            </ul>
+            <div class="tags">
+              <span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>PostgreSQL</span><span>Telegram.Bot</span>
+            </div>
+            <div class="links">
+              <a class="link" href="https://github.com/knarhar/FinanceBot" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
 
-        <article class="project reveal">
-          <div class="project-head">
-            <span class="num">03</span><span class="label">Backend · AI</span><span class="year">2025</span>
-          </div>
-          <h3 class="project-title">AI-Powered Fleet Maintenance API</h3>
-          <p>
-            A REST API for a logistics company to manage trucks, mechanics, incidents and
-            repair workflows. An LLM recommends the best mechanic for every incident.
-          </p>
-          <ul class="points">
-            <li>JWT auth, CRUD, pagination, search and soft deletion</li>
-            <li>LLM via Groq API picks a mechanic with a confidence score, plus retry logic for bad output, rate limits and API failures</li>
-            <li>Dynamic mechanic performance scoring and Cloudinary photo storage</li>
-          </ul>
-          <div class="tags">
-            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Alembic</span><span>Groq API</span><span>Cloudinary</span>
-          </div>
-          <div class="links">
-            <a class="link" href="https://github.com/knarhar/Logistics-Trucks-Maintenance" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          </div>
-        </article>
+          <article class="project">
+            <div class="project-head">
+              <span class="num">03</span><span class="label">Backend · AI</span><span class="year">2025</span>
+            </div>
+            <h3 class="project-title">AI-Powered Fleet Maintenance API</h3>
+            <p>
+              A REST API for a logistics company to manage trucks, mechanics, incidents and
+              repair workflows. An LLM recommends the best mechanic for every incident.
+            </p>
+            <ul class="points">
+              <li>JWT auth, CRUD, pagination, search and soft deletion</li>
+              <li>LLM via Groq API picks a mechanic with a confidence score, plus retry logic for bad output, rate limits and API failures</li>
+              <li>Dynamic mechanic performance scoring and Cloudinary photo storage</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Alembic</span><span>Groq API</span><span>Cloudinary</span>
+            </div>
+            <div class="links">
+              <a class="link" href="https://github.com/knarhar/Logistics-Trucks-Maintenance" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
 
-        <article class="project reveal">
-          <div class="project-head">
-            <span class="num">04</span><span class="label">Personal finance</span><span class="year">2026</span>
-          </div>
-          <h3 class="project-title">Cashew</h3>
-          <p>
-            “Where does the money go?” An expense tracker that reads bank statement exports
-            and turns them into a report, right in the browser.
-          </p>
-          <ul class="points">
-            <li>Spending by category, top places and a day-by-day chart</li>
-            <li>Savings goal panel that predicts how long a target will take</li>
-            <li>Excel statement parsing with SheetJS, light and dark themes</li>
-          </ul>
-          <div class="tags"><span>JavaScript</span><span>SheetJS</span><span>HTML</span><span>CSS</span></div>
-          <div class="links">
-            <a class="link" href="https://knarhar.github.io/Cashew/" target="_blank" rel="noopener noreferrer">Live ↗</a>
-            <a class="link" href="https://github.com/knarhar/Cashew" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          </div>
-        </article>
+          <article class="project">
+            <div class="project-head">
+              <span class="num">04</span><span class="label">Personal finance</span><span class="year">2026</span>
+            </div>
+            <h3 class="project-title">Cashew</h3>
+            <p>
+              “Where does the money go?” An expense tracker that reads bank statement exports
+              and turns them into a report, right in the browser.
+            </p>
+            <ul class="points">
+              <li>Spending by category, top places and a day-by-day chart</li>
+              <li>Savings goal panel that predicts how long a target will take</li>
+              <li>Excel statement parsing with SheetJS, light and dark themes</li>
+            </ul>
+            <div class="tags"><span>JavaScript</span><span>SheetJS</span><span>HTML</span><span>CSS</span></div>
+            <div class="links">
+              <a class="link" href="https://knarhar.github.io/Cashew/" target="_blank" rel="noopener noreferrer">Live ↗</a>
+              <a class="link" href="https://github.com/knarhar/Cashew" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
 
-        <article class="project reveal">
-          <div class="project-head">
-            <span class="num">05</span><span class="label">Hackathon · AI</span>
-          </div>
-          <h3 class="project-title">Lutea</h3>
-          <p>
-            An AI-focused product built at the Hack Nation AI Hackathon. Combined software
-            engineering and AI to ship a working prototype under a tight deadline.
-          </p>
-          <div class="tags"><span>AI</span><span>Prototype</span><span>Hack Nation</span></div>
-          <div class="links">
-            <a class="link" href="https://lutea.administration.ae" target="_blank" rel="noopener noreferrer">lutea.administration.ae ↗</a>
-          </div>
-        </article>
+          <article class="project">
+            <div class="project-head">
+              <span class="num">05</span><span class="label">Hackathon · AI</span>
+            </div>
+            <h3 class="project-title">Lutea</h3>
+            <p>
+              An AI-focused product built at the Hack Nation AI Hackathon. Combined software
+              engineering and AI to ship a working prototype under a tight deadline.
+            </p>
+            <div class="tags"><span>AI</span><span>Prototype</span><span>Hack Nation</span></div>
+            <div class="links">
+              <a class="link" href="https://lutea.administration.ae" target="_blank" rel="noopener noreferrer">lutea.administration.ae ↗</a>
+            </div>
+          </article>
+        </div>
 
         <h3 class="subtitle reveal">More projects</h3>
         <ul class="list reveal">
