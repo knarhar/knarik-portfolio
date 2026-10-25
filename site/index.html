@@ -73,9 +73,37 @@
         </div>
         <h2 class="title reveal">Selected projects</h2>
 
+        <div class="stats reveal">
+          <div class="stat"><span class="stat-value">490+</span><span class="stat-label">GitHub contributions in the past year</span></div>
+          <div class="stat"><span class="stat-value">35</span><span class="stat-label">public repositories</span></div>
+          <div class="stat"><span class="stat-value">C# · Python · TS</span><span class="stat-label">what I ship in most</span></div>
+        </div>
+
         <article class="project reveal">
           <div class="project-head">
-            <span class="num">01</span><span class="label">Backend · AI</span>
+            <span class="num">01</span><span class="label">Telegram bot · .NET</span><span class="year">2026</span>
+          </div>
+          <h3 class="project-title">FinanceBot</h3>
+          <p>
+            A Telegram bot that tracks spending. Send it “4.50 coffee with milk” and it saves
+            the entry; ask for /today or /month and it replies with a recap.
+          </p>
+          <ul class="points">
+            <li>Automatic daily digest with a link to a full web report page</li>
+            <li>Month view: last 7 vs previous 7 days, typical day and top 3 categories</li>
+            <li>Polling or webhook mode, command handlers wired as keyed services</li>
+          </ul>
+          <div class="tags">
+            <span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>PostgreSQL</span><span>Telegram.Bot</span>
+          </div>
+          <div class="links">
+            <a class="link" href="https://github.com/knarhar/FinanceBot" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-head">
+            <span class="num">02</span><span class="label">Backend · AI</span><span class="year">2025</span>
           </div>
           <h3 class="project-title">AI-Powered Fleet Maintenance API</h3>
           <p>
@@ -88,13 +116,58 @@
             <li>Dynamic mechanic performance scoring and Cloudinary photo storage</li>
           </ul>
           <div class="tags">
-            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>JWT</span><span>Groq API</span><span>Cloudinary</span>
+            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Alembic</span><span>Groq API</span><span>Cloudinary</span>
+          </div>
+          <div class="links">
+            <a class="link" href="https://github.com/knarhar/Logistics-Trucks-Maintenance" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </article>
 
         <article class="project reveal">
           <div class="project-head">
-            <span class="num">02</span><span class="label">Hackathon · AI</span>
+            <span class="num">03</span><span class="label">Learning platform</span><span class="year">2026</span>
+          </div>
+          <h3 class="project-title">LearnSharp</h3>
+          <p>
+            An interactive C# deep-dive built as a game of worlds and levels. Each level has
+            theory in plain words, a highlighted code example, links to docs and a checked task.
+          </p>
+          <ul class="points">
+            <li>OOP, generics, LINQ internals, async/await, multithreading, GC and design patterns</li>
+            <li>Three languages (English, Russian, Armenian) with shared progress</li>
+            <li>XP and progress saved in the browser, no server needed</li>
+          </ul>
+          <div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>localStorage</span></div>
+          <div class="links">
+            <a class="link" href="https://knarhar.github.io/LearnSharp/" target="_blank" rel="noopener noreferrer">Live ↗</a>
+            <a class="link" href="https://github.com/knarhar/LearnSharp" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-head">
+            <span class="num">04</span><span class="label">Personal finance</span><span class="year">2026</span>
+          </div>
+          <h3 class="project-title">Cashew</h3>
+          <p>
+            “Where does the money go?” An expense tracker that reads bank statement exports
+            and turns them into a report, right in the browser.
+          </p>
+          <ul class="points">
+            <li>Spending by category, top places and a day-by-day chart</li>
+            <li>Savings goal panel that predicts how long a target will take</li>
+            <li>Excel statement parsing with SheetJS, light and dark themes</li>
+          </ul>
+          <div class="tags"><span>JavaScript</span><span>SheetJS</span><span>HTML</span><span>CSS</span></div>
+          <div class="links">
+            <a class="link" href="https://knarhar.github.io/Cashew/" target="_blank" rel="noopener noreferrer">Live ↗</a>
+            <a class="link" href="https://github.com/knarhar/Cashew" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-head">
+            <span class="num">05</span><span class="label">Hackathon · AI</span>
           </div>
           <h3 class="project-title">Lutea</h3>
           <p>
@@ -102,33 +175,105 @@
             engineering and AI to ship a working prototype under a tight deadline.
           </p>
           <div class="tags"><span>AI</span><span>Prototype</span><span>Hack Nation</span></div>
-          <a class="link" href="https://lutea.administration.ae" target="_blank" rel="noopener noreferrer">lutea.administration.ae ↗</a>
+          <div class="links">
+            <a class="link" href="https://lutea.administration.ae" target="_blank" rel="noopener noreferrer">lutea.administration.ae ↗</a>
+          </div>
         </article>
 
-        <h3 class="subtitle reveal">Earlier work</h3>
+        <h3 class="subtitle reveal">More projects</h3>
         <ul class="list reveal">
           <li>
             <a href="https://github.com/knarhar/Microservices" target="_blank" rel="noopener noreferrer">
-              <span class="list-name">Microservices Online Store</span>
-              <span class="list-meta">FastAPI · Django · RabbitMQ</span>
+              <span class="list-main">
+                <span class="list-name">Microservices Online Store</span>
+                <span class="list-desc">Auth, product and payment services talking through RabbitMQ</span>
+              </span>
+              <span class="list-meta">FastAPI · Django · Flask</span>
               <span class="arrow">↗</span>
             </a>
           </li>
           <li>
-            <a href="https://github.com/knarhar/Online-courses-platform-frontend-" target="_blank" rel="noopener noreferrer">
-              <span class="list-name">Online Courses Platform</span>
-              <span class="list-meta">React · Django REST</span>
+            <a href="https://github.com/knarhar/CSharpTodoAPI" target="_blank" rel="noopener noreferrer">
+              <span class="list-main">
+                <span class="list-name">Todo API</span>
+                <span class="list-desc">REST API with users, auth and task ownership</span>
+              </span>
+              <span class="list-meta">ASP.NET Core · EF Core</span>
+              <span class="arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/knarhar/TechGen-MediaConverter" target="_blank" rel="noopener noreferrer">
+              <span class="list-main">
+                <span class="list-name">Media Converter</span>
+                <span class="list-desc">Job manager that runs a worker process per job, with progress and cancellation</span>
+              </span>
+              <span class="list-meta">C# · .NET</span>
+              <span class="arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/knarhar/Factory-Processing-and-Logistics-System" target="_blank" rel="noopener noreferrer">
+              <span class="list-main">
+                <span class="list-name">Factory &amp; Logistics Simulation</span>
+                <span class="list-desc">Tick-based pipeline from machines to stock with thread-safe queues</span>
+              </span>
+              <span class="list-meta">C# · .NET 8</span>
+              <span class="arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/knarhar/Job-Scheduler" target="_blank" rel="noopener noreferrer">
+              <span class="list-main">
+                <span class="list-name">Job Scheduler</span>
+                <span class="list-desc">Event-driven scheduler with retry and fail-safe executors</span>
+              </span>
+              <span class="list-meta">C# · .NET</span>
               <span class="arrow">↗</span>
             </a>
           </li>
           <li>
             <a href="https://github.com/knarhar/MemoMap" target="_blank" rel="noopener noreferrer">
-              <span class="list-name">MemoMap Notes</span>
+              <span class="list-main">
+                <span class="list-name">MemoMap</span>
+                <span class="list-desc">Card-based notes app with categories and inline editing</span>
+              </span>
               <span class="list-meta">React · Django REST</span>
               <span class="arrow">↗</span>
             </a>
           </li>
+          <li>
+            <a href="https://github.com/knarhar/WortBox" target="_blank" rel="noopener noreferrer">
+              <span class="list-main">
+                <span class="list-name">WortBox</span>
+                <span class="list-desc">Full-stack app for learning German vocabulary</span>
+              </span>
+              <span class="list-meta">React · Django</span>
+              <span class="arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/knarhar/Online-courses-platform-frontend-" target="_blank" rel="noopener noreferrer">
+              <span class="list-main">
+                <span class="list-name">Online Courses Platform</span>
+                <span class="list-desc">Course platform with a React frontend and Django REST backend</span>
+              </span>
+              <span class="list-meta">React · Django REST</span>
+              <span class="arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://knarhar.github.io/QuizProto/" target="_blank" rel="noopener noreferrer">
+              <span class="list-main">
+                <span class="list-name">IPA Vowel Quiz</span>
+                <span class="list-desc">Audio quiz for learning IPA vowel sounds, adapts to mistakes</span>
+              </span>
+              <span class="list-meta">JavaScript</span>
+              <span class="arrow">↗</span>
+            </a>
+          </li>
         </ul>
+        <a class="link" href="https://github.com/knarhar?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories on GitHub ↗</a>
       </div>
     </section>
 
