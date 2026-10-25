@@ -18,9 +18,41 @@ const sectionObserver = new IntersectionObserver((entries) => {
       navLinks.forEach((link) => {
         link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
       });
+      if (!hovered) movePill(activeLink());
     }
   });
 }, { rootMargin: '-45% 0px -50% 0px' });
+
+// Nav highlight: a single pill glides to the hovered link and back to the active one.
+const navBar = document.querySelector('.nav-links');
+const pill = document.querySelector('.nav-pill');
+let hovered = null;
+const activeLink = () => navBar.querySelector('a.active');
+
+function movePill(link) {
+  if (!link) {
+    pill.classList.remove('show');
+    return;
+  }
+  // Appearing from nothing: jump into place first, then fade in, instead of sliding from the edge.
+  if (!pill.classList.contains('show')) {
+    pill.classList.add('instant');
+    pill.getBoundingClientRect();
+  }
+  pill.style.setProperty('--x', `${link.offsetLeft}px`);
+  pill.style.setProperty('--w', `${link.offsetWidth}px`);
+  pill.getBoundingClientRect();
+  pill.classList.remove('instant');
+  pill.classList.add('show');
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener('mouseenter', () => { hovered = link; movePill(link); });
+  link.addEventListener('focus', () => movePill(link));
+  link.addEventListener('blur', () => movePill(activeLink()));
+});
+navBar.addEventListener('mouseleave', () => { hovered = null; movePill(activeLink()); });
+window.addEventListener('resize', () => movePill(hovered || activeLink()));
 
 document.querySelectorAll('main section[id]').forEach((s) => sectionObserver.observe(s));
 
