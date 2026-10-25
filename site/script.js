@@ -26,32 +26,48 @@ document.querySelectorAll('main section[id]').forEach((s) => sectionObserver.obs
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Stacking project cards: each card sticks a little lower than the previous one,
-// then shrinks and dims as the next card slides over it.
+// Stacking project cards: each card sticks 16px lower than the previous one and
+// dims as the next card slides over it, leaving an even 16px edge of every card.
 const cards = [...document.querySelectorAll('.project-stack .project')];
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const STACK_TOP = 96;
+const STACK_STEP = 16;
+let stickyTops = [];
+let offsets = cards.map(() => 0);
 
 function layoutCards() {
-  cards.forEach((card, i) => {
-    const top = 96 + i * 16;
+  stickyTops = cards.map((card, i) => {
     // A card taller than the space left would hide its bottom while stuck,
-    // so it scrolls fully into view first and sticks after that.
-    const fit = window.innerHeight - card.offsetHeight - 24;
-    card.style.setProperty('--top', `${Math.min(top, fit)}px`);
+    // so it sticks higher and slides down into the deck once it is covered.
+    const top = Math.min(STACK_TOP + i * STACK_STEP, window.innerHeight - card.offsetHeight - 24);
+    card.style.setProperty('--top', `${top}px`);
+    return top;
   });
   updateCards();
 }
 
 function updateCards() {
-  if (reduceMotion.matches) return;
-  cards.forEach((card, i) => {
-    const next = cards[i + 1];
-    if (!next) return;
+  // Read everything first: where each card sits without our transform.
+  const layoutTops = cards.map((card, i) => card.getBoundingClientRect().top - offsets[i]);
+  const last = cards.length - 1;
+  // Once the last card starts scrolling away, the whole deck goes with it.
+  const exit = Math.min(0, layoutTops[last] - stickyTops[last]);
+
+  const progress = cards.map((card, i) => {
+    if (i === last) return 0;
     // 0 while the next card is below the fold, 1 once it has reached its sticky spot.
-    const stickAt = parseFloat(next.style.getPropertyValue('--top'));
-    const travel = window.innerHeight - stickAt;
-    const p = Math.min(Math.max(1 - (next.getBoundingClientRect().top - stickAt) / travel, 0), 1);
-    card.style.setProperty('--p', p.toFixed(3));
+    const travel = window.innerHeight - stickyTops[i + 1];
+    return Math.min(Math.max(1 - (layoutTops[i + 1] - stickyTops[i + 1]) / travel, 0), 1);
+  });
+  offsets = cards.map((card, i) => progress[i] * (STACK_TOP + i * STACK_STEP + exit - layoutTops[i]));
+
+  cards.forEach((card, i) => {
+    card.style.setProperty('--p', progress[i].toFixed(3));
+    card.style.setProperty('--y', `${offsets[i].toFixed(1)}px`);
+    if (i === last) return;
+    // Hide whatever sits below the next card's top (plus its rounded corner),
+    // so a tall card never peeks out under a shorter one.
+    const visible = layoutTops[i + 1] + offsets[i + 1] - (layoutTops[i] + offsets[i]) + 32;
+    card.style.setProperty('--clip', `${Math.max(0, card.offsetHeight - visible).toFixed(1)}px`);
   });
 }
 
