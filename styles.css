@@ -236,8 +236,9 @@ ul { padding: 0; list-style: none; }
 
 /* Projects */
 /* Cards stick under the nav and the next one slides over them like a deck.
-   script.js sets --top (taller cards stick later so their bottom stays readable)
-   and --p (0 → 1 as the next card covers this one). */
+   script.js sets --top (taller cards stick higher so their bottom stays readable),
+   --y (keeps covered cards lined up in the deck), --p (0 → 1 as the next card
+   covers this one) and --clip (the part hidden under the next card). */
 .project-stack { margin-bottom: 24px; }
 .project {
   --p: 0;
@@ -249,8 +250,8 @@ ul { padding: 0; list-style: none; }
   padding: 32px 24px;
   margin-bottom: 32px;
   box-shadow: 0 -16px 48px rgba(0, 0, 0, 0.5);
-  transform: scale(calc(1 - var(--p) * 0.06));
-  transform-origin: 50% 0;
+  transform: translateY(var(--y, 0px));
+  clip-path: inset(0 0 var(--clip, 0px) 0 round var(--radius));
   transition: border-color 0.4s var(--ease);
 }
 .project:last-child { margin-bottom: 0; }
