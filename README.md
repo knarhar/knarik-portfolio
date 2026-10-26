@@ -5,20 +5,6 @@ Personal portfolio of Knarik Harutyunyan, Full Stack Developer (AI & Cloud) from
 A single static page with a dark theme, bold display type and pink and violet accents. It has
 these sections: Hero, Work, Experience, Stack, Education and Contact.
 
-## Files
-
-All site files live in `site/`:
-
-- `site/index.html` - page content
-- `site/styles.css` - all styles (fonts: Unbounded for headings, Onest for text)
-- `site/script.js` - scroll reveal, active nav link and stacking project cards
-- `site/assets/Knarik_Harutyunyan_CV.pdf` - downloadable CV
-- `site/assets/og.png` - link preview image (Telegram, LinkedIn etc.)
-- `site/CNAME` - custom domain for GitHub Pages
-
-No build step. GitHub Actions (`.github/workflows/deploy.yml`) publishes
-`site/` to GitHub Pages on every push to `main`.
-
 ## Portfolio URL
 
 [portfolio.lirare.cc](https://portfolio.lirare.cc/)
