@@ -13,10 +13,12 @@ All site files live in `site/`:
 - `site/styles.css` - all styles (fonts: Unbounded for headings, Onest for text)
 - `site/script.js` - scroll reveal, active nav link and stacking project cards
 - `site/assets/Knarik_Harutyunyan_CV.pdf` - downloadable CV
+- `site/assets/og.png` - link preview image (Telegram, LinkedIn etc.)
+- `site/CNAME` - custom domain for GitHub Pages
 
 No build step. GitHub Pages serves the `gh-pages` branch, which holds the
 contents of `site/`.
 
 ## Portfolio URL
 
-[knarhar.github.io/knarik-portfolio](https://knarhar.github.io/knarik-portfolio/)
+[portfolio.lirare.cc](https://portfolio.lirare.cc/)
