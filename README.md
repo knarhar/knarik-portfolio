@@ -16,8 +16,8 @@ All site files live in `site/`:
 - `site/assets/og.png` - link preview image (Telegram, LinkedIn etc.)
 - `site/CNAME` - custom domain for GitHub Pages
 
-No build step. GitHub Pages serves the `gh-pages` branch, which holds the
-contents of `site/`.
+No build step. GitHub Actions (`.github/workflows/deploy.yml`) publishes
+`site/` to GitHub Pages on every push to `main`.
 
 ## Portfolio URL
 
