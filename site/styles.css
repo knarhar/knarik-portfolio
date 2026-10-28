@@ -301,6 +301,13 @@ ul { padding: 0; list-style: none; }
   margin-bottom: 16px;
 }
 .project p { max-width: 66ch; color: var(--muted); }
+.shots { display: grid; gap: 12px; margin-top: 24px; }
+.shots img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
 .points { margin-top: 24px; display: grid; gap: 8px; max-width: 66ch; }
 .points li { position: relative; padding-left: 24px; }
 .points li::before {
@@ -471,6 +478,7 @@ ul { padding: 0; list-style: none; }
   .blob { right: -8%; width: 64vw; height: 64vw; }
   .project { padding: 48px; }
   .project-title { font-size: 32px; }
+  .shots { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .cards { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .grid-2 { grid-template-columns: repeat(2, 1fr); }
